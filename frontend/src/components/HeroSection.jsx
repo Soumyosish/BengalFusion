@@ -19,10 +19,7 @@ const HeroSection = () => {
             </p>
             <div className="mt-7 md:mt-10 md:text-1xl lg:text-2xl flex items-center justify-center gap-4">
               <button className="px-6 py-3 md:px-8 md:py-4 rounded-2xl border border-white/70 text-white font-semibold bg-white/10 hover:bg-white/20 transition">
-                Get Started
-              </button>
-              <button className="px-6 py-3 md:px-8 md:py-4 rounded-2xl border border-white/70 text-white font-semibold bg-white/10 hover:bg-white/20 transition">
-                Learn More
+                Explore Now
               </button>
             </div>
           </div>
