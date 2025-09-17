@@ -1,5 +1,6 @@
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
+import AboutUs from "./components/AboutUs";
 
 export default function App() {
   return (
@@ -10,10 +11,9 @@ export default function App() {
       {/* Hero Section */}
       <HeroSection/>
 
-      {/* Dummy sections to scroll */}
-      <section id="about" className="h-screen flex items-center justify-center text-4xl font-bold">
-        About Section
-      </section>
+      {/* Sections */}
+      {/* About Us */}
+      <AboutUs />
       <section id="features" className="h-screen flex items-center justify-center text-4xl font-bold">
         Features Section
       </section>
