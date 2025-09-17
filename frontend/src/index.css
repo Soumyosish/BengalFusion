@@ -1,6 +1,29 @@
 @import "tailwindcss";
 /* @import "tailwindcss/preflight";
 @tailwind utilities; */
+
+/* Custom font: Monotype Corsiva */
+@font-face {
+  font-family: 'Monotype Corsiva';
+  src: url('./assets/MonotypeCorsiva.ttf') format('truetype'),
+       url('./assets/MonotypeCorsiva.TTF') format('truetype'),
+       url('./assets/MonotypeCorsiva.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-corsiva {
+  font-family: 'Monotype Corsiva', serif;
+}
+
+/* Make Monotype Corsiva the global default font */
+html, body, #root {
+  font-family: 'Monotype Corsiva', serif;
+  background-color: #FFFDD0;
+  color: #000000;
+}
+
 html {
   scroll-behavior: smooth;
 }

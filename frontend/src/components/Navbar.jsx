@@ -6,9 +6,9 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "#" },
+    { name: "About", href: "#about" },
     { name: "Features", href: "#features" },
     { name: "Services", href: "#services" },
-    { name: "About", href: "#about" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -23,7 +23,7 @@ export default function Navbar() {
               alt="Brand Logo"
               className="w-10 h-10 rounded-full shadow-md border border-white/30"
             />
-            <span className="text-2xl font-extrabold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
+            <span className="text-2xl md:text-3xl lg:text-4xl font-extrabold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
               BengalFusion
             </span>
           </a>
@@ -34,7 +34,7 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="relative group text-white/90 hover:text-white transition font-medium"
+                className="relative group text-xl md:text-2xl lg:text-3xl bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent"
               >
                 {link.name}
                 <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-gradient-to-r from-pink-500 to-indigo-500 group-hover:w-full transition-all duration-300"></span>
