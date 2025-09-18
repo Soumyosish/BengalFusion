@@ -63,7 +63,7 @@ export default function AboutUs() {
         <h2 className="text-4xl md:text-6xl font-extrabold text-black drop-shadow-[0_3px_12px_rgba(0,0,0,0.06)]">
           About Us
         </h2>
-        <p className="mt-4 md:mt-6 max-w-4xl mx-auto text-black/80 md:text-xl leading-relaxed">
+        <p className="mt-4 md:mt-6 max-w-5xl mx-auto text-black/80 md:text-2xl leading-relaxed">
           Welcome to Bengal Fusion, where every corner of Bengal’s enchanting tapestry comes alive. Our mission is to immerse you in the diverse world of Bengal—its scenic beauty, rich traditions, vibrant festivals, soul-stirring music, and legendary cuisine.
         </p>
       </div>
@@ -74,7 +74,7 @@ export default function AboutUs() {
       </div>
 
       <div className="mt-12 md:mt-16 text-center" data-animate="right">
-        <p className="text-black/80 md:text-lg max-w-3xl mx-auto">
+        <p className="text-black/80 md:text-2xl max-w-3xl mx-auto">
           Bengal Fusion is your gateway to understanding the harmony of heritage and modernity that defines Bengal. Whether you are a traveler, a curious food lover, a culture explorer, or someone longing for the flavors of home, our site welcomes you to experience the true spirit of Bengal—all in one place.
         </p>
       </div>

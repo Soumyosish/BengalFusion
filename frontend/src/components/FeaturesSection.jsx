@@ -1,0 +1,100 @@
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import touristPlacesImg from "../assets/tourist2.webp";
+import foodsImg from "../assets/misti1.jpg";
+import festivalsImg from "../assets/durga-10.jpg";
+import musicImg from "../assets/music1.jpg";
+
+import DetailedCards from "./DetailedCards";
+
+const categories = [
+  {
+    id: 1,
+    title: "Historical Places",
+    description: "Explore popular tourist destinations in West Bengal",
+    image: touristPlacesImg,
+    path: "/west-bengal/tourist-places"
+  },
+  {
+    id: 2,
+    title: "Foods",
+    description: "Discover delicious Bengali cuisine",
+    image: foodsImg,
+    path: "/west-bengal/foods"
+  },
+  {
+    id: 3,
+    title: "Festivals",
+    description: "Experience vibrant West Bengal festivals",
+    image: festivalsImg,
+    path: "/west-bengal/festivals"
+  },
+  {
+    id: 4,
+    title: "Art & Music",
+    description: "Enjoy traditional and modern Bengali music",
+    image: musicImg,
+    path: "/west-bengal/music"
+  }
+];
+
+const FeaturesSection = () => {
+  const [showDetailed, setShowDetailed] = useState(false);
+  const navigate = useNavigate();
+
+  const handleCardClick = (category) => {
+    if (category.title === "Historical Places") {
+      setShowDetailed(true);
+    } else {
+      navigate(category.path);
+    }
+  };
+
+  if (showDetailed) {
+    // Add a button or way to go back if needed
+    return (
+      <section className="py-10">
+        <button
+          onClick={() => setShowDetailed(false)}
+          className="mb-6 px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
+        >
+          Back
+        </button>
+        <DetailedCards />
+      </section>
+    );
+  }
+
+  return (
+    <section className="py-10 px-4 md:px-12">
+      <h2 className="text-3xl font-bold mb-10 text-center">Explore West Bengal</h2>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        {categories.map(({ id, title, description, image, path }) => (
+          <div
+            key={id}
+            onClick={() => handleCardClick({ id, title, description, image, path })}
+            className="cursor-pointer rounded-xl shadow-lg overflow-hidden bg-white hover:scale-[1.03] transform transition duration-300 ease-in-out"
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") handleCardClick({ id, title, description, image, path });
+            }}
+          >
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-48 object-cover rounded-t-xl"
+            />
+            <div className="p-5">
+              <h3 className="text-xl font-semibold mb-1">{title}</h3>
+              <p className="text-gray-600 text-sm">{description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default FeaturesSection;
