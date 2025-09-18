@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import touristPlacesImg from "../assets/tourist2.webp";
 import foodsImg from "../assets/misti1.jpg";
@@ -39,31 +39,10 @@ const categories = [
 ];
 
 const FeaturesSection = () => {
-  const [showDetailed, setShowDetailed] = useState(false);
   const navigate = useNavigate();
-
   const handleCardClick = (category) => {
-    if (category.title === "Historical Places") {
-      setShowDetailed(true);
-    } else {
-      navigate(category.path);
-    }
+    navigate(category.path);
   };
-
-  if (showDetailed) {
-    // Add a button or way to go back if needed
-    return (
-      <section className="py-10">
-        <button
-          onClick={() => setShowDetailed(false)}
-          className="mb-6 px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
-        >
-          Back
-        </button>
-        <DetailedCards />
-      </section>
-    );
-  }
 
   return (
     <section className="py-10 px-4 md:px-12">
