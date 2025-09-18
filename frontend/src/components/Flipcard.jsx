@@ -38,7 +38,7 @@ const FlipCard = ({ title, image, brief, description }) => {
         >
           <h3 className="text-xl font-bold mb-2">{title}</h3>
           <p className="mb-1 font-semibold">{brief}</p>
-          <p className="text-gray-700 text-xl whitespace-pre-line">{description}</p>
+          <p className="text-gray-700 text-xl whitespace-pre-line ">{description}</p>
         </div>
       </div>
     </div>
