@@ -46,8 +46,8 @@ export default function Footer() {
                 <a href="#home" className="hover:underline">Home</a>
                 <a href="#about" className="hover:underline">About</a>
                 <a href="#features" className="hover:underline">Features</a>
-                <a href="#learn" className="hover:underline">Testimonials</a>
-                <a href="#contact" className="hover:underline">Contact</a>
+                <a href="#faqs" className="hover:underline">Faqs</a>
+                <a href="#newsletter" className="hover:underline">Contact</a>
               </nav>
             </div>
             {/* <div className="h-[2px] w-full bg-gradient-to-r from-fuchsia-500 via-violet-500 to-indigo-500 rounded-full shadow-[0_0_16px_rgba(139,92,246,0.8)]"/> */}

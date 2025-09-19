@@ -12,10 +12,12 @@ import FestivalsPage from "./pages/FestivalsPage";
 import ArtPage from "./pages/ArtPage";
 import FaqsSection from "./components/FaqsSection";
 import Testimonials from "./components/Testimonials";
+import ScrollToTop from "./components/ScrollToTop";
 function RootLayout() {
   return (
     <div className="min-h-screen  text-black">
       <Navbar />
+      <ScrollToTop/>
       <Outlet />
       <Footer />
     </div>

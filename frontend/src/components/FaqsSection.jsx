@@ -51,7 +51,7 @@ const FaqsSection = () => {
   }
 
   return (
-    <div className="max-w-6xl mx-auto mt-12 px-4 md:px-0">
+    <div id="faqs" className="max-w-6xl mx-auto mt-12 px-4 md:px-0">
       <h2 className="text-4xl font-extrabold text-center text-gray-900 mb-14">
         Frequently Asked Questions
       </h2>

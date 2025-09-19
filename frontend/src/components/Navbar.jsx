@@ -1,16 +1,33 @@
 import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from "../assets/logo.png";
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const navLinks = [
-    { name: "Home", href: "#" },
-    { name: "About", href: "#about" },
-    { name: "Features", href: "#features" },
-    { name: "Faqs", href: "#faqs" },
-    { name: "Contact", href: "#newsletter" },
+    { name: "Home", id: "home" },
+    { name: "About", id: "about" },
+    { name: "Features", id: "features" },
+    { name: "Faqs", id: "faqs" },
+    { name: "Contact", id: "newsletter" },
   ];
+
+  const handleNavClick = (id) => {
+    setOpen(false); // close mobile menu if open
+
+    if (location.pathname !== "/") {
+      // Navigate to root with hash to trigger routing
+      navigate(`/#${id}`);
+    } else {
+      // Scroll to the element with the id on the home page
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white/10 backdrop-blur-lg shadow-md border-b border-white/20">
@@ -30,15 +47,16 @@ export default function Navbar() {
 
           {/* Desktop Links */}
           <div className="hidden md:flex space-x-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
+            {navLinks.map(({ name, id }) => (
+              <button
+                key={name}
+                onClick={() => handleNavClick(id)}
                 className="relative group text-xl md:text-2xl lg:text-3xl bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent"
+                type="button"
               >
-                {link.name}
+                {name}
                 <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-gradient-to-r from-pink-500 to-indigo-500 group-hover:w-full transition-all duration-300"></span>
-              </a>
+              </button>
             ))}
           </div>
 
@@ -46,6 +64,8 @@ export default function Navbar() {
           <button
             onClick={() => setOpen(!open)}
             className="md:hidden text-white"
+            aria-label="Toggle menu"
+            type="button"
           >
             {open ? <X size={28} /> : <Menu size={28} />}
           </button>
@@ -54,15 +74,15 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {open && (
           <div className="md:hidden flex flex-col space-y-3 py-4 animate-fade-in-down">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-white/90 hover:text-white transition text-lg font-medium"
-                onClick={() => setOpen(false)}
+            {navLinks.map(({ name, id }) => (
+              <button
+                key={name}
+                onClick={() => handleNavClick(id)}
+                className="text-white/90 hover:text-white transition text-lg font-medium text-left"
+                type="button"
               >
-                {link.name}
-              </a>
+                {name}
+              </button>
             ))}
           </div>
         )}

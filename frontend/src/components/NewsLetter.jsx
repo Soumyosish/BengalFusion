@@ -11,7 +11,7 @@ const Newsletter = () => {
   };
 
   return (
-    <div
+    <div id="newsletter"
       style={{
         minHeight: "350px",
         width: "100%",

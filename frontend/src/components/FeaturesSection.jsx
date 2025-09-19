@@ -44,7 +44,7 @@ const FeaturesSection = () => {
   };
 
   return (
-    <section className="py-10 px-4 md:px-12">
+    <section id="features" className="py-10 px-4 md:px-12">
       <h2 className="text-3xl font-bold mb-10 text-center">Explore West Bengal</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
@@ -66,7 +66,7 @@ const FeaturesSection = () => {
             />
             <div className="p-5">
               <h3 className="text-2xl font-semibold mb-1">{title}</h3>
-              <p className="text-gray-600 text-sm text-xl">{description}</p>
+              <p className="text-gray-600 text-xl">{description}</p>
             </div>
           </div>
         ))}
