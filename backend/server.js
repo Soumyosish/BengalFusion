@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.get('/', (req, res) => {
-  res.send('AlphaSafari backend is running!');
+  res.send('BengalFusion backend is running!');
 });
 
 // 404 handler
