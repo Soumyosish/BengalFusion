@@ -10,7 +10,8 @@ import TouristPlacesPage from "./pages/TouristPlacesPage";
 import FoodsPage from "./pages/FoodsPage";
 import FestivalsPage from "./pages/FestivalsPage";
 import ArtPage from "./pages/ArtPage";
-
+import FaqsSection from "./components/FaqsSection";
+import Testimonials from "./components/Testimonials";
 function RootLayout() {
   return (
     <div className="min-h-screen  text-black">
@@ -31,12 +32,8 @@ export default function App() {
               <HeroSection />
               <AboutUs />
               <FeaturesSection />
-              <section id="services" className="h-screen flex items-center justify-center text-4xl font-bold">
-                Services Section
-              </section>
-              <section id="contact" className="h-screen flex items-center justify-center text-4xl font-bold">
-                Contact Section
-              </section>
+              <FaqsSection />
+              <Testimonials/>
               <NewsLetter />
             </>
           }

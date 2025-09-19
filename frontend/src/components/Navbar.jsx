@@ -8,8 +8,8 @@ export default function Navbar() {
     { name: "Home", href: "#" },
     { name: "About", href: "#about" },
     { name: "Features", href: "#features" },
-    { name: "Services", href: "#services" },
-    { name: "Contact", href: "#contact" },
+    { name: "Faqs", href: "#faqs" },
+    { name: "Contact", href: "#newsletter" },
   ];
 
   return (
