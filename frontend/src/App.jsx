@@ -17,7 +17,7 @@ function RootLayout() {
   return (
     <div className="min-h-screen  text-black">
       <Navbar />
-      <ScrollToTop/>
+      <ScrollToTop />
       <Outlet />
       <Footer />
     </div>
@@ -35,12 +35,15 @@ export default function App() {
               <AboutUs />
               <FeaturesSection />
               <FaqsSection />
-              <Testimonials/>
+              <Testimonials />
               <NewsLetter />
             </>
           }
         />
-        <Route path="/west-bengal/tourist-places" element={<TouristPlacesPage />} />
+        <Route
+          path="/west-bengal/tourist-places"
+          element={<TouristPlacesPage />}
+        />
         <Route path="/west-bengal/foods" element={<FoodsPage />} />
         <Route path="/west-bengal/festivals" element={<FestivalsPage />} />
         <Route path="/west-bengal/music" element={<ArtPage />} />

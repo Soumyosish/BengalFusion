@@ -11,7 +11,8 @@ const Newsletter = () => {
   };
 
   return (
-    <div id="newsletter"
+    <div
+      id="newsletter"
       style={{
         minHeight: "350px",
         width: "100%",
@@ -22,16 +23,19 @@ const Newsletter = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        position: "relative"
+        position: "relative",
       }}
     >
       {/* Semi-transparent overlay for text readability (optional, can remove) */}
       <div
         style={{
           position: "absolute",
-          top: 0, left: 0, right: 0, bottom: 0,
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
           // background: "rgba(0,0,0,0.40)", // Reduce alpha for even lighter overlay or remove for no overlay
-          zIndex: 1
+          zIndex: 1,
         }}
       />
 
@@ -43,29 +47,35 @@ const Newsletter = () => {
           textAlign: "center",
           color: "#fff",
           width: "100%",
-          maxWidth: "480px"
+          maxWidth: "480px",
         }}
         onSubmit={handleSubmit}
       >
-        <h2 style={{
-          fontSize: "2rem",
-          fontWeight: "bold",
-          marginBottom: "8px",
-          marginTop: "20px",
-        }}>
-          <span className="text-teal-500">Get Your</span> Travel Inspiration<br />Straight to Your Inbox
+        <h2
+          style={{
+            fontSize: "2rem",
+            fontWeight: "bold",
+            marginBottom: "8px",
+            marginTop: "20px",
+          }}
+        >
+          <span className="text-teal-500">Get Your</span> Travel Inspiration
+          <br />
+          Straight to Your Inbox
         </h2>
-        <div style={{
-          display: "flex",
-          gap: "4px", // Reduced gap from 8px to 4px for closer alignment
-          margin: "24px 0",
-          justifyContent: "center",
-        }}>
+        <div
+          style={{
+            display: "flex",
+            gap: "4px", // Reduced gap from 8px to 4px for closer alignment
+            margin: "24px 0",
+            justifyContent: "center",
+          }}
+        >
           <input
             type="email"
             placeholder="Email address"
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             required
             style={{
               padding: "10px",
@@ -79,13 +89,14 @@ const Newsletter = () => {
               boxSizing: "border-box",
               // Adding placeholder color support:
               "::placeholder": {
-                color: "rgba(255, 255, 255, 0.6)"
-              }
+                color: "rgba(255, 255, 255, 0.6)",
+              },
             }}
             // For cross-browser placeholder styling:
-            onFocus={(e) => e.target.style.color = "#fff"}
+            onFocus={(e) => (e.target.style.color = "#fff")}
             onBlur={(e) => {
-              if (!e.target.value) e.target.style.color = "rgba(255, 255, 255, 0.6)";
+              if (!e.target.value)
+                e.target.style.color = "rgba(255, 255, 255, 0.6)";
             }}
           />
           <button
@@ -98,19 +109,26 @@ const Newsletter = () => {
               color: "#fff",
               fontWeight: "bold",
               cursor: "pointer",
-              fontSize: "1rem"
+              fontSize: "1rem",
             }}
           >
             Subscribe
           </button>
         </div>
-        <div style={{
-          fontSize: "0.95rem",
-          color: "#fff",
-          opacity: 0.85,
-          marginTop: "8px"
-        }}>
-          <span className="text-white text-2xl"><b>Subscribe for tour newsletters and exclusive promotions. Read our Privacy Policy.</b></span>
+        <div
+          style={{
+            fontSize: "0.95rem",
+            color: "#fff",
+            opacity: 0.85,
+            marginTop: "8px",
+          }}
+        >
+          <span className="text-white text-2xl">
+            <b>
+              Subscribe for tour newsletters and exclusive promotions. Read our
+              Privacy Policy.
+            </b>
+          </span>
         </div>
       </form>
     </div>

@@ -12,8 +12,12 @@ const FlipCard = ({ title, image, brief, description }) => {
           transformStyle: "preserve-3d",
           transitionProperty: "transform",
         }}
-        onMouseEnter={e => { e.currentTarget.style.transform = "rotateY(180deg)"; }}
-        onMouseLeave={e => { e.currentTarget.style.transform = "rotateY(0deg)"; }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = "rotateY(180deg)";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = "rotateY(0deg)";
+        }}
       >
         {/* Front side */}
         <div
@@ -38,7 +42,9 @@ const FlipCard = ({ title, image, brief, description }) => {
         >
           <h3 className="text-xl font-bold mb-2">{title}</h3>
           <p className="mb-1 font-semibold">{brief}</p>
-          <p className="text-gray-700 text-xl whitespace-pre-line ">{description}</p>
+          <p className="text-gray-700 text-xl whitespace-pre-line ">
+            {description}
+          </p>
         </div>
       </div>
     </div>
