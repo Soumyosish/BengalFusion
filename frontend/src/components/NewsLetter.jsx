@@ -151,6 +151,12 @@ const Newsletter = () => {
               color: message.type === "error" ? "#ff6b6b" : "#70e000",
               fontWeight: "bold",
               marginTop: "8px",
+              fontSize: "1.5rem", // Make message larger
+              textShadow:
+                message.type === "error"
+                  ? "0 0 2px #ff6b6b"
+                  : "0 0 2px #008080",
+              letterSpacing: "1px",
             }}
           >
             {message.text}
