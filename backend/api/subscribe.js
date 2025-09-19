@@ -1,7 +1,14 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 import { MongoClient } from "mongodb";
 import nodemailer from "nodemailer";
 
-const uri = process.env.MONGODB_URI; // MongoDB connection string from environment variables
+const uri = process.env.MONGODB_URI;
+if (!uri) {
+  throw new Error("MONGODB_URI is not defined");
+}
+
 const ownerEmail = process.env.OWNER_EMAIL; // Owner email to receive copy
 
 let cachedClient = null;
