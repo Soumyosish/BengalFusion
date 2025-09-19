@@ -16,37 +16,35 @@ const FaqsSection = () => {
   }, [])
 
   const faqs = [
-    {
-      question: "What Tourist Places Can I Explore?",
-      answer:
-        "Bengal Fusion showcases top attractions including the Sundarbans, Darjeeling, Victoria Memorial, and other must-visit destinations in West Bengal."
-    },
-    {
-      question: "What Foods Are Featured?",
-      answer:
-        "Discover Bengal's rich culinary heritage with dishes like Rosogolla, Fish Curry, and Mishti Doi featured on the site."
-    },
-    {
-      question: "Which Festivals Are Covered?",
-      answer:
-        "Learn about Durga Puja, Poila Boishakh, Diwali, and many other vibrant cultural festivals celebrated across Bengal."
-    },
-    {
-      question: "What Cultural Traditions Can I Discover?",
-      answer:
-        "Explore traditional arts, crafts, dance, and Bengali customs that form the heart of Bengal's cultural identity."
-    },
-    {
-      question: "Does The Site Highlight Bengal Music?",
-      answer:
-        "From classical Rabindra Sangeet to modern folk and contemporary music, Bengal Fusion covers a wide spectrum of musical heritage."
-    },
-    {
-      question: "Can I Learn About Historical Places?",
-      answer:
-        "Yes, historical sites like the Victoria Memorial, Marble Palace, and ancient temples are detailed for visitors and history buffs."
-    }
-  ]
+  {
+    question: "What are some famous tourist places to visit in West Bengal?",
+    answer: "West Bengal offers diverse attractions including the Sundarbans mangrove forest, the hill station Darjeeling, colonial heritage at Victoria Memorial, Marble Palace in Kolkata, and ancient temples across the region."
+  },
+  {
+    question: "What types of Bengali food can I explore on this site?",
+    answer: "Discover a variety of local cuisines such as Rosogolla, Mishti Doi (sweetened yogurt), Shorshe Ilish (Hilsa fish in mustard sauce), Kolkata Biryani, and popular street foods like Jhalmuri and Egg Rolls."
+  },
+  {
+    question: "Does the site include information on Bengali art and crafts?",
+    answer: "Yes, the site features traditional arts like Terracotta craft from Bankura, Kantha embroidery, Dokra metal craft, and Sholapith decorations widely used during festivals."
+  },
+  {
+    question: "Are historical and heritage sites detailed for travelers?",
+    answer: "Yes, you can find information on historical landmarks such as the Victoria Memorial, Marble Palace, and other iconic places representing Bengal’s rich history and architecture."
+  },
+  {
+    question: "When is the best time to visit historical sites in West Bengal?",
+    answer: "The best time to visit most historical places in West Bengal is from October to March when the weather is pleasant."
+  },
+  {
+    question: "Are there any UNESCO recognized heritage sites in West Bengal?",
+    answer: "While West Bengal has many historically significant sites, notable protected heritage sites include the Sundarbans and the Darjeeling Himalayan Railway, recognized by UNESCO."
+  },
+  {
+    question: "Which historical places in West Bengal have rich architectural significance?",
+    answer: "Sites like the Victoria Memorial (classical British architecture), Rasmancha (terracotta architecture), and the Italian-style Hazarduari Palace showcase Bengal’s rich architectural heritage."
+  }
+]
 
   const toggleFaq = (index) => {
     setOpenIndex(openIndex === index ? null : index)

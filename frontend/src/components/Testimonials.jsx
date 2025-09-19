@@ -5,24 +5,24 @@ import image3 from "../assets/image3.jpeg";
 
 const testimonials = [
   {
-    name: "Martina Edelweist",
+    name: "Ishita Ghosh",
     designation: "Satisfied Customer",
     quote:
-      "Shining Yam is a hidden gem! The impeccable service and overall attention to detail created a memorable experience. I highly recommend it!",
+      "Bengal Fusion beautifully captures the essence of West Bengal's culture and heritage. The detailed insights into tourist spots and festivals made my trip unforgettable!",
     src: image2,
   },
   {
-    name: "Samir Gupta",
+    name: "Arindam Chatterjee",
     designation: "Food Enthusiast",
     quote:
-      "I loved the authentic flavors! The ambiance was cozy and the staff was truly welcoming.",
+      "The culinary journey through Bengal’s authentic dishes like Rosogolla and Shorshe Ilish featured here is simply amazing. The site gave me a craving to explore Bengali flavors!",
     src: image3,
   },
   {
-    name: "Ananya Biswas",
+    name: "Anwesha Roy",
     designation: "Frequent Visitor",
     quote:
-      "Every visit is a delight. Highly recommended for anyone who values quality and good taste!",
+      "Every visit to Bengal feels enriched thanks to the cultural and historical information presented. This site is a must-visit for anyone wanting to dive deep into Bengal’s traditions.",
     src: image1,
   },
 ];

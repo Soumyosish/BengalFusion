@@ -169,13 +169,13 @@ const CircularTestimonials = ({
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
               <h3
-                className="font-bold mb-1"
+                className="font-bold mb-1 text-2xl"
                 style={{ color: colorName, fontSize: fontSizeName }}
               >
                 {activeTestimonial.name}
               </h3>
               <p
-                className="mb-4 text-lg"
+                className="mb-4 text-xl"
                 style={{ color: colorDesignation, fontSize: fontSizeDesignation }}
               >
                 {activeTestimonial.designation}

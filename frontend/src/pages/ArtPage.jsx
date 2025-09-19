@@ -143,7 +143,7 @@ export default function MusicPage() {
   return (
     <main className="py-10 px-4 md:px-12"><br/><br/>
       <h1 className="text-3xl font-bold mb-6 text-center">Art & Music</h1>
-      <p className="text-center text-gray-700 max-w-3xl mx-auto">
+      <p className="text-center text-gray-700 max-w-3xl mx-auto text-2xl">
         Enjoy traditional and modern Bengali music, from Rabindra Sangeet to Baul folk, and more.
       </p>
       <div className="flex flex-wrap justify-center items-start gap-4">

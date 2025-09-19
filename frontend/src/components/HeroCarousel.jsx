@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import culture1 from '../assets/culture1.jpg'
-import durga10 from '../assets/durga-10.jpg'
+import durga10 from '../assets/durga.webp'
 import misti1 from '../assets/misti1.jpg'
 import tourist1 from '../assets/tourist1.webp'
 
@@ -11,7 +11,7 @@ const IMAGES = [
 	{ src: misti1, alt: 'Bengali Sweets' },
 ]
 
-export default function HeroCarousel({ autoPlayMs = 2000 }) {
+export default function HeroCarousel({ autoPlayMs = 3000 }) {
 	const [currentIndex, setCurrentIndex] = useState(0)
 	const [isPaused, setIsPaused] = useState(false)
 	const intervalRef = useRef(null)

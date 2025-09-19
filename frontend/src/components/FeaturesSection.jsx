@@ -1,9 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import touristPlacesImg from "../assets/tourist2.webp";
-import foodsImg from "../assets/misti1.jpg";
-import festivalsImg from "../assets/durga-10.jpg";
-import musicImg from "../assets/music1.jpg"
+import touristPlacesImg from "../assets/historical14.jpeg";
+import foodsImg from "../assets/food6.jpg";
+import festivalsImg from "../assets/durga_feature.png";
+import musicImg from "../assets/art12.jpg"
 
 const categories = [
   {
@@ -40,6 +40,7 @@ const FeaturesSection = () => {
   const navigate = useNavigate();
   const handleCardClick = (category) => {
     navigate(category.path);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -61,11 +62,11 @@ const FeaturesSection = () => {
             <img
               src={image}
               alt={title}
-              className="w-full h-48 object-cover rounded-t-xl"
+              className="w-full h-66 object-cover rounded-t-xl"
             />
             <div className="p-5">
-              <h3 className="text-xl font-semibold mb-1">{title}</h3>
-              <p className="text-gray-600 text-sm">{description}</p>
+              <h3 className="text-2xl font-semibold mb-1">{title}</h3>
+              <p className="text-gray-600 text-sm text-xl">{description}</p>
             </div>
           </div>
         ))}

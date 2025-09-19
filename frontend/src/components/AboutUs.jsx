@@ -75,7 +75,7 @@ export default function AboutUs() {
 
       <div className="mt-12 md:mt-16 text-center" data-animate="right">
         <p className="text-black/80 md:text-2xl max-w-3xl mx-auto">
-          Bengal Fusion is your gateway to understanding the harmony of heritage and modernity that defines Bengal. Whether you are a traveler, a curious food lover, a culture explorer, or someone longing for the flavors of home, our site welcomes you to experience the true spirit of Bengal—all in one place.
+          Bengal Fusion is your gateway of understanding the harmony of heritage and modernity that defines Bengal. Whether you are a traveler, a curious food lover, a culture explorer, or someone longing for the flavors of home, our site welcomes you to experience the true spirit of Bengal—all in one place.
         </p>
       </div>
 
