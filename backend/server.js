@@ -9,6 +9,14 @@ console.log("Loaded MONGODB_URI:", process.env.MONGODB_URI);
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.get('/', (req, res) => {
+  res.send('AlphaSafari backend is running!');
+});
+
+// 404 handler
+app.use((req, res) => {
+  res.status(404).json({ error: 'Not found' });
+});
 
 app.post("/api/subscribe", subscribeHandler);
 const PORT = process.env.PORT || 5000;
