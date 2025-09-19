@@ -15,7 +15,7 @@ const FoodFlipCard = ({ food }) => {
         <div className="absolute w-full h-full backface-hidden rounded-2xl shadow-2xl overflow-hidden bg-white transform rotate-y-180">
           <div className="p-8 h-full flex flex-col justify-center text-center">
             <h3 className="text-2xl mb-4 text-black font-bold">{food.name}</h3>
-            <p className="text-base leading-relaxed mb-5 text-black text-xl">
+            <p className=" leading-relaxed mb-5 text-black text-xl">
               {food.description}
             </p>
           </div>
