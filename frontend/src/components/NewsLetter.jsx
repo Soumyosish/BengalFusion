@@ -1,13 +1,48 @@
 import React, { useState } from "react";
-import backgroundImage from "../assets/newsletter.jpeg"; // Ensure you have an appropriate image in assets
+import backgroundImage from "../assets/newsletter.jpeg";
 
 const Newsletter = () => {
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  // Base URL for backend API from environment variable
+  const backendUrl = import.meta.env.VITE_BACKEND_URL || "";
 
   // Handler for form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Implement submission logic here
+    setMessage(null);
+    setLoading(true);
+
+    try {
+      const res = await fetch(`${backendUrl}/api/subscribe`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setMessage({ type: "success", text: data.message });
+        setEmail(""); // reset input on success
+      } else {
+        setMessage({
+          type: "error",
+          text: data.message || "Subscription failed",
+        });
+      }
+    } catch {
+      setMessage({
+        type: "error",
+        text: "Network error. Please try again later.",
+      });
+    }
+
+    setLoading(false);
   };
 
   return (
@@ -26,7 +61,7 @@ const Newsletter = () => {
         position: "relative",
       }}
     >
-      {/* Semi-transparent overlay for text readability (optional, can remove) */}
+      {/* Optional overlay */}
       <div
         style={{
           position: "absolute",
@@ -34,12 +69,11 @@ const Newsletter = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          // background: "rgba(0,0,0,0.40)", // Reduce alpha for even lighter overlay or remove for no overlay
+          // background: "rgba(0,0,0,0.40)",
           zIndex: 1,
         }}
       />
 
-      {/* Content */}
       <form
         style={{
           position: "relative",
@@ -66,7 +100,7 @@ const Newsletter = () => {
         <div
           style={{
             display: "flex",
-            gap: "4px", // Reduced gap from 8px to 4px for closer alignment
+            gap: "4px",
             margin: "24px 0",
             justifyContent: "center",
           }}
@@ -83,16 +117,11 @@ const Newsletter = () => {
               border: "2px solid white",
               outline: "none",
               fontSize: "1rem",
-              width: "190px", // Slightly reduced width for better spacing with button
+              width: "190px",
               color: "#fff",
               backgroundColor: "transparent",
               boxSizing: "border-box",
-              // Adding placeholder color support:
-              "::placeholder": {
-                color: "rgba(255, 255, 255, 0.6)",
-              },
             }}
-            // For cross-browser placeholder styling:
             onFocus={(e) => (e.target.style.color = "#fff")}
             onBlur={(e) => {
               if (!e.target.value)
@@ -105,16 +134,28 @@ const Newsletter = () => {
               padding: "10px 28px",
               borderRadius: "0 999px 999px 0",
               border: "none",
-              background: "#f57242", // match image accent
+              background: "#f57242",
               color: "#fff",
               fontWeight: "bold",
-              cursor: "pointer",
+              cursor: loading ? "not-allowed" : "pointer",
               fontSize: "1rem",
             }}
+            disabled={loading}
           >
-            Subscribe
+            {loading ? "Subscribing..." : "Subscribe"}
           </button>
         </div>
+        {message && (
+          <div
+            style={{
+              color: message.type === "error" ? "#ff6b6b" : "#70e000",
+              fontWeight: "bold",
+              marginTop: "8px",
+            }}
+          >
+            {message.text}
+          </div>
+        )}
         <div
           style={{
             fontSize: "0.95rem",
