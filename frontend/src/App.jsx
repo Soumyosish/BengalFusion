@@ -9,7 +9,7 @@ import { Routes, Route, Outlet } from "react-router-dom";
 import TouristPlacesPage from "./pages/TouristPlacesPage";
 import FoodsPage from "./pages/FoodsPage";
 import FestivalsPage from "./pages/FestivalsPage";
-import MusicPage from "./pages/MusicPage";
+import ArtPage from "./pages/ArtPage";
 
 function RootLayout() {
   return (
@@ -44,7 +44,7 @@ export default function App() {
         <Route path="/west-bengal/tourist-places" element={<TouristPlacesPage />} />
         <Route path="/west-bengal/foods" element={<FoodsPage />} />
         <Route path="/west-bengal/festivals" element={<FestivalsPage />} />
-        <Route path="/west-bengal/music" element={<MusicPage />} />
+        <Route path="/west-bengal/music" element={<ArtPage />} />
       </Route>
     </Routes>
   );

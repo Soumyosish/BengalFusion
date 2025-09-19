@@ -3,9 +3,7 @@ import { useNavigate } from "react-router-dom";
 import touristPlacesImg from "../assets/tourist2.webp";
 import foodsImg from "../assets/misti1.jpg";
 import festivalsImg from "../assets/durga-10.jpg";
-import musicImg from "../assets/music1.jpg";
-
-import DetailedCards from "./DetailedCards";
+import musicImg from "../assets/music1.jpg"
 
 const categories = [
   {
